@@ -1,0 +1,46 @@
+<div class="row">
+  <div class="col-xs-12">
+    <img [src] ="dvd.imagePath"
+    alt="{{dvd.name}}"
+    class="img-responsive"
+    style="max-height:300px">
+  </div>
+</div>
+<div class="row">
+  <div class="col-xs-12">
+    <h1>{{dvd.name}}</h1>
+  </div>
+</div>
+<div class="row">
+  <div class="col-xs-12">
+    <div 
+    class="btn-group"
+    appDropdown>
+      <button type="button"
+      class="btn btn-primary dropdown-toggle">
+      Manage Film <span class="caret"></span>
+    </button>
+    <ul class="dropdown-menu">
+      <li> <a (click)="onAddOrderList()" style="cursor:pointer;"> To Order</a></li>
+      <li> <a (click)="onEditDvd()" style="cursor:pointer;"> Edit Film</a></li>
+      <li> <a (click)="onDeleteDvd()" style="cursor:pointer;"> Delete Film</a></li>
+    </ul>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-xs-12">
+    {{dvd.description}}
+  </div>
+</div>
+<div class="row">
+  <div class="col-xs-12">
+    <ul class="list-group">
+      <li
+      class="list-group-item"
+      *ngFor="let ingredient of dvd.ingredients">
+      {{ingredient.name}}-{{ingredient.amount}}
+    </li>
+    </ul>
+  </div>
+</div>

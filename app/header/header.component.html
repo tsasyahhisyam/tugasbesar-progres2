@@ -1,0 +1,32 @@
+<img width="1400" height ="400" src="../src/app/img/marvel.gif"> 
+<div class="navbar" navbar-default>
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a routerLink="/" class="navbar-brand" style="color:rgb(235, 135, 5);">DVD STORE</a>
+    </div>
+    <div class="colapse navbar-collapse">
+      <ul class="nav navbar-nav">
+        <li routerLinkActive="active">
+          <a routerLink="/dvds" style="color:rgb(235, 135, 5);">DVD Item</a>
+        </li>
+        <li routerLinkActive="active">
+          <a routerLink="/order-list" style="color:rgb(235, 135, 5);">Order</a>
+        </li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown" appDropdown>
+          <a style="cursor:pointer;" class="dropdown-toggle" role="button" style="color:rgb(235, 135, 5);">Manage <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li>
+              <a style="cursor:pointer;" (click)="onSaveData()">Save Data</a>
+            </li>
+            <li>
+              <a style="cursor:pointer;" (click)="onFetchData()">Fetch Data</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+

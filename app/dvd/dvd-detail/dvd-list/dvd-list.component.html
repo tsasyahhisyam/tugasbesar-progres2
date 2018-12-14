@@ -1,0 +1,15 @@
+<div class="row">
+    <div class="col-xs-12">
+        <button class="btn btn-success" (click)="onNewDvd()">Add Film</button>
+        <hr>
+    </div>
+    <hr>
+</div>
+<div class="row">
+    <div class="col-xs-12">
+        <app-dvd-item
+        *ngFor="let dvdEL of dvds; let i = index"
+        [dvd]="dvdEL"
+        [index]="i"></app-dvd-item>
+    </div>
+</div>
